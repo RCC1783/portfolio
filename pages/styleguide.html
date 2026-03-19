@@ -14,17 +14,19 @@
 </head>
 <body>
     <header id="nav_header">
-        <h1>Styleguide</h1>
-        <nav>
+        <a class="logotype" href="#">Styleguide</a>
+        <nav class="mainLinks">
+            <a class="nav-link" href="../index.html">Homepage</a>
+        </nav>
+        <nav class="styleguideLinks">
             <div>
-                <a href="#textElements">Text Elements</a>
-                <a href="#interactives">Interactives</a>
+                <a class="nav-link" href="#textElements">Text Elements</a>
+                <a class="nav-link" href="#interactives">Interactives</a>
             </div>
-            <a href="../index.html">Portfolio Homepage</a>
         </nav>
     </header>
     <div class="page_content">
-        <section id="textElements">
+        <section id="textElements" class="col">
             <h2>Text Elements</h2>
             <h3>Default text</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -64,13 +66,22 @@
             </div>
         </section>
 
-        <section id="interactives">
+        <section id="interactives" class="col">
             <h2>Interactives</h2>
-            <h3>In-text Links</h3>
+            <h3>Links</h3>
             <a href="#">In text link</a>
+
+            <div style="display: flex; padding: 10px; background-color: #969696; border-radius: 10px; height: fit-content; width: fit-content;">
+                <a class="nav-link" href="#">Nav Link</a>
+            </div>
+            <p>(Background added for visibility)</p>
 
             <h3>Buttons</h3>
             <button>Button 1</button>
+        </section>
+
+        <section class="row">
+
         </section>
     </div>
     <footer>
