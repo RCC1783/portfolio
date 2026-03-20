@@ -1,3 +1,7 @@
+/* 
+    For custom cursors: https://blog.logrocket.com/custom-cursor-css/
+*/
+
 :root{
     background-color: blanchedalmond;
     background-image: url("../assets/WebsiteBackground.png");
@@ -6,6 +10,8 @@
 
     max-height: 100vh;
     margin: 0;
+
+    cursor: url(/assets/pointer_b.png), auto;
 }
 
 body{
@@ -63,6 +69,7 @@ p, a, q, ol, ul{
 a{
     text-decoration: underline dotted;
     color: #ac3e13;
+    cursor: url(/assets/hand_small_point.png), auto;
 }
 
 h1{
