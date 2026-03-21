@@ -14,16 +14,22 @@
     cursor: url(/assets/pointer_b.png), auto;
     font-family: "Nunito", sans-serif;
 
-    --primary_grad: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);;
+    --primary_grad: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);
+    --content_bg: rgba(255, 248, 242, 0.92);
+    --content_text_color: black;
+    --header_text_color: white;
 }
+
+
 
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(circle, rgba(251, 163, 63, 0.2) 40%, rgb(255, 115, 143, .4) 100%);
+    background: radial-gradient(circle, rgba(251, 163, 63, 0.2) 50%, rgb(255, 115, 143, .5) 95%);
     min-height: 100vh;
     margin: 0;
+    backdrop-filter: saturate(70%);
 }
 
 .page_content{
@@ -31,7 +37,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 
-    margin: 10px auto;
+    margin: 0 auto;
 
     min-width: 150px;
     width: 90%;
@@ -39,6 +45,33 @@ body{
 
     min-height: 90vh;
 }
+
+.landing{
+    position: relative;
+    margin: 0 auto;
+    width: 98vw;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.landing img{
+    width: 100%;
+    aspect-ratio: 16/7;
+    object-fit: cover;
+    filter: saturate(30%);
+}
+.landing p{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+
+    font-size: 7rem;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 0 0 10px rgba(49, 0, 73, 0.6);
+}
+
 .flex_container{
     display: flex;
     flex-direction: row;
@@ -50,7 +83,7 @@ body{
     flex-direction: column;
     /* align-items: center; */
     margin: 10px;
-    max-width: 50%;
+    /* max-width: 45%; */
     flex: 1;
 
     padding: 30px 60px;
@@ -88,7 +121,7 @@ body{
 }
 
 .content_bg{
-    background-color: rgba(255, 248, 242, 0.92);
+    background-color: var(--content_bg);
     backdrop-filter: blur(5px);
 }
 
@@ -108,7 +141,7 @@ a{
 
 h1{
     font-family: "Nunito", sans-serif;
-    font-size: 5rem;
+    font-size: 3.25rem;
     font-weight: 1000;
     margin-top: 1rem;
     margin-bottom: 1.25rem;
@@ -136,14 +169,23 @@ h4{
     margin-bottom: 1rem;
 }
 
+img{
+    max-width: 100%;
+}
+
 #nav_header{
     position: sticky;
     top: 10px;
+    left: 10px;
+    right: 10px;
     width: 90vw;
+    max-width: 100%;
+    min-height: max-content;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 15px 25px 15px 60px;
     background: var(--primary_grad);
     /* border: 4px solid rgb(214, 90, 115); */
@@ -155,19 +197,28 @@ h4{
     z-index: 99; /* Set z-index high to ensure header renders above everything*/
 }
 #nav_header .logotype{
-    margin: 0 auto 0 0;
+    margin: 0;
     font-family: "Nunito", sans-serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 1000;
     color: white;
     text-decoration: none;
     text-shadow: 0 0 6px rgba(73, 0, 110, 0.3);
 }
+#nav_header nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: fit-content;
+}
 
 /* https://css-irl.info/animating-underlines/ */
 .nav-link{
+    box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 1000;
     font-variant: all-small-caps;
     color: white;
@@ -176,7 +227,7 @@ h4{
     text-shadow: 0 0 3px rgba(73, 0, 110, 0.3);
 
     padding: 15px 40px;
-    margin: 5px;
+    /* margin: 5px; */
 
     border-radius: 30px;
 
@@ -187,7 +238,10 @@ h4{
 
 .nav-link:hover, .nav-link:focus{
     box-shadow: 0 0 10px rgba(73, 0, 110, 0.3);
-    background: rgba(73, 0, 110, 0.08);
+    background: rgba(73, 0, 110, 0.1);
+}
+.tags_cont{
+    margin: 0;
 }
 .content_tag{
     text-decoration: underline 0.08rem rgba(0, 0, 0, 0);
@@ -216,6 +270,10 @@ h4{
 
 .animation{
     color: rgb(145, 72, 255);
+}
+
+.char_design{
+    color: rgb(72, 170, 255);
 }
 
 button{
@@ -316,7 +374,7 @@ blockquote p{
 .project_card img{
     background-color: black;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     filter: none;
 
     transition: filter 0.3s;
@@ -349,4 +407,24 @@ blockquote p{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+
+    justify-content: center;
+    align-items: center;
 }
+
+/* @media (prefers-color-scheme: dark){
+    :root{
+        --primary_grad: radial-gradient(circle, rgba(206, 103, 0, 0.9) 26%, rgb(186, 0, 96) 90%);
+        --content_bg: rgba(61, 49, 38, 0.92);
+        color: white;
+        --header_text_color: white;
+    }
+    body{
+        background: radial-gradient(circle, rgba(193, 116, 29, 0.2) 50%, rgba(111, 7, 47, 0.5) 95%);
+        backdrop-filter: invert(70%);
+    }
+    
+    footer{
+        background: #47281d;
+    }
+} */
