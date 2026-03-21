@@ -12,6 +12,9 @@
     margin: 0;
 
     cursor: url(/assets/pointer_b.png), auto;
+    font-family: "Nunito", sans-serif;
+
+    --primary_grad: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);;
 }
 
 body{
@@ -31,43 +34,74 @@ body{
     margin: 10px auto;
 
     min-width: 150px;
-    width: 85%;
-    max-width: 1800px;
+    width: 90%;
+    max-width: 1900px;
+
+    min-height: 90vh;
 }
-.page_content .col {
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.col {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     margin: 10px;
     max-width: 50%;
     flex: 1;
 
-    background-color: rgba(255, 248, 242, 0.912);
     padding: 30px 60px;
 
     /* border: 4px  solid  rgb(255, 251, 245); */
     border-radius: 20px;
 }
-.page_content .row {
+.row {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     margin: 10px;
     width: 100%;
 
-    background-color: rgba(255, 248, 242, 0.912);
     padding: 30px 60px;
 
     /* border: 4px  solid  rgb(255, 251, 245); */
     border-radius: 20px;
 }
 
-p, a, q, ol, ul{
-    font-family: "Nunito", sans-serif;
+.page_content .col_noBG {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 10px;
+    max-width: 50%;
+    flex: 1;
+
+    padding: 30px 60px;
+
+    /* border: 4px  solid  rgb(255, 251, 245); */
+    border-radius: 20px;
+}
+
+.content_bg{
+    background-color: rgba(255, 248, 242, 0.92);
+    backdrop-filter: blur(5px);
+}
+
+.min_50-perc{
+    min-width: 45%;
+}
+
+p{
+    margin-top: 0.25rem;
 }
 
 a{
-    text-decoration: underline dotted;
+    text-decoration: underline 0.09rem dotted;
     color: #ac3e13;
     cursor: url(/assets/hand_small_point.png), auto;
 }
@@ -76,19 +110,30 @@ h1{
     font-family: "Nunito", sans-serif;
     font-size: 5rem;
     font-weight: 1000;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
 }
 h2{
     font-family: "Nunito", sans-serif;
     font-size: 2.1rem;
     font-weight: 850;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 h3{
     font-family: "Nunito", sans-serif;
     font-weight: 750;
+
+    margin-top: 0.25rem;
+    margin-bottom: 1.15rem;
 }
 h4{
     font-family: "Nunito", sans-serif;
     font-weight: 700;
+
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
 }
 
 #nav_header{
@@ -100,10 +145,14 @@ h4{
     align-items: center;
     justify-content: center;
     padding: 15px 25px 15px 60px;
-    background: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);
+    background: var(--primary_grad);
     /* border: 4px solid rgb(214, 90, 115); */
     border-radius: 50px;
     margin: 10px;
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter */
+    backdrop-filter: blur(5px);
+    z-index: 99; /* Set z-index high to ensure header renders above everything*/
 }
 #nav_header .logotype{
     margin: 0 auto 0 0;
@@ -112,15 +161,19 @@ h4{
     font-weight: 1000;
     color: white;
     text-decoration: none;
+    text-shadow: 0 0 6px rgba(73, 0, 110, 0.3);
 }
+
+/* https://css-irl.info/animating-underlines/ */
 .nav-link{
     font-family: "Nunito", sans-serif;
     font-size: 1.25rem;
     font-weight: 1000;
     font-variant: all-small-caps;
     color: white;
-    /* background: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%); */
+    
     text-decoration: none;
+    text-shadow: 0 0 3px rgba(73, 0, 110, 0.3);
 
     padding: 15px 40px;
     margin: 5px;
@@ -128,18 +181,48 @@ h4{
     border-radius: 30px;
 
     box-shadow: 0 0 6px rgba(73, 0, 110, 0.3);
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.4s, background 0.4s;
+    backdrop-filter: blur(10px);
 }
 
-.nav-link:hover{
+.nav-link:hover, .nav-link:focus{
     box-shadow: 0 0 10px rgba(73, 0, 110, 0.3);
+    background: rgba(73, 0, 110, 0.08);
+}
+.content_tag{
+    text-decoration: underline 0.08rem rgba(0, 0, 0, 0);
+    transition: text-decoration-color 0.3s;
+    font-size: 1rem;
+
+    transition: text-decoration-color 0.3s;
+}
+
+/* https://www.w3schools.com/cssref/sel_before.php */
+.content_tag::before{
+    color: black;
+    content: "<"
+}
+.content_tag::after{
+    color: black;
+    content: ">"
+}
+.content_tag:hover, .content_tag:focus  {
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+.game_dev{
+    color: #21b63a;
+}
+
+.animation{
+    color: rgb(145, 72, 255);
 }
 
 button{
     padding: 10px;
     font-family: "Nunito", sans-serif;
     font-weight: 700;
-    background: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);
+    background: var(--primary_grad);
     color: white;
     border: none;
     border-radius: 25px;
@@ -147,12 +230,15 @@ button{
 }
 
 footer{
-    width: 97vw;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
     background: #ffa67df7;
     border-bottom: none;
     margin: 0;
-    padding: 20px 30px;
+    padding: 50px 100px;
     border-radius: 100px 100px 0 0;
+    gap: 20px
 }
 
 blockquote{
@@ -169,18 +255,98 @@ blockquote p{
 }
 
 .callout{
-    background-color: #e9704062;
-    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgba(255, 227, 163, 0.8);
+    background: linear-gradient(10deg, rgba(255, 164, 119, 0.5) 5%, rgba(255, 210, 105, 0.5) 60%);
+    margin: 20px 0; 
+    padding: 20px 30px;
     border-radius: 20px;
-    box-shadow: -10px 10px rgba(177, 55, 24, 0.5);
+    gap: 20px;
+    /* box-shadow: 0px 0px 5px rgba(74, 0, 96, 0.2); */
+}
+.callout p{
+    min-width: 45%;
+    margin: 0;
+    flex: 1;
+}
+
+.call_alt1{
+    background: rgba(255, 227, 163, 0.8);
+    background: linear-gradient(10deg, rgba(155, 212, 255, 0.5) 5%, rgba(150, 255, 173, 0.5) 60%);
+}
+
+.center_text{
+    text-align: center;
 }
 
 .project_head{
     display: flex;
     align-items: center;
+    text-justify: center;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .project_head hr{
     flex:1;
     margin: 30px
+}
+
+.project_head h1{
+    margin-bottom: 1rem;
+}
+
+.project_card{
+    position: relative;
+    display: flex;
+
+    width: 13vw;
+    min-width: 9rem;
+    aspect-ratio: 4/3;
+
+    text-decoration: none;
+    border-radius: 40px;
+    overflow: hidden;
+
+    box-shadow: 0 0 3px rgba(73, 0, 110, 0.3);
+}
+
+.project_card img{
+    background-color: black;
+    width: 100%;
+    object-fit: contain;
+    filter: none;
+
+    transition: filter 0.3s;
+}
+.project_card:hover img{
+    filter: brightness(50%);
+}
+.project_card p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* width: 100%; */
+    /* margin: 10px; */
+
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+
+    transition: color 0.2s;
+}
+.project_card:hover p{
+    color: white;
+}
+
+.flex_grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
 }
