@@ -60,16 +60,19 @@ body{
     object-fit: cover;
     filter: saturate(30%);
 }
-.landing p{
+.landing_content{
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translate(0, -50%);
 
+    color: white;
+}
+.landing_head{
     font-size: 7rem;
     font-weight: 1000;
-    color: white;
     text-shadow: 0 0 10px rgba(49, 0, 73, 0.6);
+    margin: 0;
 }
 
 .flex_container{
