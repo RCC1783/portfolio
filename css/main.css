@@ -54,17 +54,18 @@ body{
     overflow: hidden;
 }
 
-.landing img{
+.landing video{
+    background: black;
     width: 100%;
     aspect-ratio: 16/7;
     object-fit: cover;
-    filter: saturate(30%);
+    filter: saturate(70%) brightness(60%);
 }
 .landing_content{
     position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(0, -50%);
+    top: 10%;
+    left: 5%;
+    /* transform: translate(0, -100%); */
 
     color: white;
 }
@@ -72,7 +73,14 @@ body{
     font-size: 7rem;
     font-weight: 1000;
     text-shadow: 0 0 10px rgba(49, 0, 73, 0.6);
+    text-shadow: 0 0 10px rgba(49, 0, 73, 0.6);
     margin: 0;
+}
+
+.landing_subhead{
+    font-size: 1.5rem;
+    font-weight: 650;
+    margin-bottom: 2rem;
 }
 
 .flex_container{
@@ -411,7 +419,7 @@ blockquote p{
     flex-wrap: wrap;
     gap: 20px;
 
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
