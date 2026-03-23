@@ -28,7 +28,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <h3>Quotes</h3>
-            <q>skjffhsekjfhskjfhskjfhkjsdh</q>
+            <p><q>skjffhsekjfhskjfhskjfhkjsdh</q></p>
 
             <h3>Block-quotes</h3>
             <blockquote>
@@ -60,40 +60,88 @@
             <div class="callout">
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
             </div>
+            <p><code>
+                &lt;div class="callout">&lt;/div> <br>
+                &lt;p>Lorem ipsum ...&lt;/p> <br>
+                &lt;/div>
+            </code></p>
             <div class="callout call_alt1">
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
             </div>
+            <p><code>
+                &lt;div class="callout call_alt1">&lt;/div> <br>
+                &lt;p>Lorem ipsum ...&lt;/p> <br>
+                &lt;/div>
+            </code></p>
         </section>
 
         <section id="interactives" class="col content_bg">
             <h2>Interactives</h2>
             <h3>Links</h3>
             <a href="#">In text link</a>
+            <p><code>
+                &lt;a href="#"> In text link &lt;/a>
+            </code></p>
 
             <div style="display: flex; padding: 10px; background-color: #969696; border-radius: 10px; height: fit-content; width: fit-content;">
                 <a class="nav-link" href="#">Nav Link</a>
             </div>
             <p>(Background added for visibility)</p>
+            <p><code>
+                &lt;a class="nav-link" href="#">Nav Link&lt;/a>
+            </code></p>
+            
 
             <p>Content Tags</p>
             <ul>
-                <li><a href="/pages/works.html#games" class="content_tag game_dev">Games</a></li>
-                <li><a href="/pages/works.html#animation" class="content_tag animation">Animation</a></li>
-                <li><a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></li>
+                <li><a href="/pages/works.html#games" class="content_tag game_dev">Games</a> <br> <code>&lt;href="/pages/works.html#games" class="content_tag game_dev">Games&lt;/a></code></li>
+                <li><a href="/pages/works.html#animation" class="content_tag animation">Animation</a> <br> <code>&lt;a href="/pages/works.html#animation" class="content_tag animation">Animation&lt;/a></code></li>
+                <li><a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a> <br> <code>&lt;a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design&lt;/a></code></li>
             </ul>
 
-            <h3>Buttons</h3>
-            <button>Button 1</button>
+            <!-- <h3>Buttons</h3> -->
+            <!-- <button>Button 1</button> -->
 
             <h3>Project Cards</h3>
             <a href="#" class="project_card">
-                <img src="/assets/star_icon.png">
+                <img src="/assets/star_icon.png" alt="...">
                 <p>Project Name</p>
             </a>
+            <p><code>
+                &lt;a href="#" class="project_card"> <br>
+                    &lt;img src="/assets/star_icon.png" alt="..."> <br>
+                    &lt;p>Project Name&lt;/p> <br>
+                &lt;/a>   
+            </code></p>
         </section>
 
         <section class="row content_bg">
             <h2>Combined</h2>
+            <h3>Nav/Page Header-bar</h3>
+            <p><code>
+                &lt;header id="nav_header"> <br>
+                    &lt;a class="logotype" href="#">Styleguide&lt;/a> <br>
+                    &lt;nav class="mainLinks"> <br>
+                        &lt;a class="nav-link" href="/index.html">Homepage&lt;/a> <br>
+                        &lt;a class="nav-link" href="#textElements">Text Elements&lt;/a> <br>
+                        &lt;a class="nav-link" href="#interactives">Interactives&lt;/a> <br>
+                    &lt;/nav> <br>
+                &lt;/header>
+            </code></p>
+
+            <h3>Project Header</h3>
+            <div class="project_head">
+                <h1>Project Title</h1>
+                <hr>
+                <p class="tags_cont"><a href="/pages/works.html#games" class="content_tag game_dev">Games</a> | <a href="/pages/works.html#animation" class="content_tag animation">Animation</a> | <a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></p>
+            </div>
+            <p><code>
+                &lt;div class="project_head"> <br>
+                    &lt;h1>Project Title&lt;/h1> <br>
+                    &lt;hr> <br>
+                    &lt;p class="tags_cont">&lt;a href="/pages/works.html#games" class="content_tag game_dev">Games&lt;/a> | &lt;a href="/pages/works.html#animation" class="content_tag animation">Animation&lt;/a> | &lt;a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design&lt;/a>&lt;/p> <br>
+                &lt;/div>
+            </code></p>
         </section>
     </div>
     <footer>
