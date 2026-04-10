@@ -337,6 +337,12 @@ figure img{
     border-radius: 15px;
     margin-bottom: 16px;
 }
+figure video{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 16px;
+}
 figcaption {
     width: 90%;
 }
@@ -509,6 +515,29 @@ blockquote p{
     align-self: center;
 }
 
+.three_col_grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 50px;
+}
+
+.three_col_grid .span{
+    grid-column-end: span 3;
+}
+
+.three_col_grid div{
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.three_col_grid figure{
+    margin: 0;
+    align-self: center;
+}
+
 @media screen and (max-width: 1000px){
     .landing_head{
         font-size: 5rem;
@@ -541,12 +570,20 @@ blockquote p{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 850px){
     .two_col_grid{
         grid-template-columns: auto;
     }
 
     .two_col_grid .span{
+        grid-column-end: span 1;
+    }
+
+    .three_col_grid{
+        grid-template-columns: auto;
+    }
+
+    .three_col_grid .span {
         grid-column-end: span 1;
     }
 }
