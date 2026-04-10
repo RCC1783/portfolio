@@ -15,7 +15,8 @@
 <body>
     <header id="nav_header">
         <a class="logotype" href="/index.html">Roan Clifford</a>
-        <nav>
+        <button id="hamburger" class="nav-link">menu</button>
+        <nav id="link_container">
             <a class="nav-link" href="../pages/works.html">Works</a>
             <a class="nav-link" href="#">Character Art</a>
             <a class="nav-link" href="../pages/about.html">About</a>
@@ -26,56 +27,64 @@
             <div class="project_head">
                 <h1>NMBR1</h1>
                 <hr>
-                <p class="tags_cont"><a href="../pages/works.html#animation" class="content_tag animation">Animation</a> | <a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></p>
+                <div class="tags_cont"><a href="../pages/works.html#animation" class="content_tag animation">Animation</a> <a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></div>
             </div>
 
-            <section id="overview" class="flex_container">
+            <section id="overview" class="two_col_grid" style="grid-template-columns: 50% auto;">
                 <!-- Placeholder Image. Should replace w gameplay video -->
-                <iframe width="60%" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/-ICaFI-DHqY?si=BG1u_5ZQgX0Kz4Y9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="col">
+                <iframe width="100%" class="project_hero" src="https://www.youtube.com/embed/-ICaFI-DHqY?si=BG1u_5ZQgX0Kz4Y9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div style="width: 100%;">
                     <h2>Overview</h2>
-                    <p>NMBR1 is an animated music video originally completed in a group setting over 10 weeks for Simon Fraser University’s Animation class.</p>
+                    <p>Made as a project for Simon Fraser University’s Animation class, NMBR1 is a narrative driven animated music video created with four other students over the course of roughly 10 weeks.</p>
                     <div class="callout center_text">
                         <p><b>Roles:</b> 3D Modelling | Character Designer  </p>
                         <p><b>Timeline:</b> Spring 2025</p>
                         <p><b>Tools:</b> Blender | Figma | Photoshop </p>
                     </div>
                 </div>
-                <div class="callout row center_text call_alt1">
-                    <p><b>Goal:</b> <br> Create a high-energy, bright, and fun music video that demonstrates the learned principles of animation as well as other concepts from the course.</p>
+                <div class="callout center_text call_alt1 span">
+                    <p><b>Goal:</b> <br> Create a high-energy, vibrant, and fun music video demonstrating the principles of animation and showcasing our knowledge of course materials.</p>
                 </div>
             </section>
         </div>
         <div class="row content_bg">
-            <section id="section1">
-                <h2>Concepts</h2>
-                <p>Once the team had selected a song to animate, we settled on an intense street race as out plot. With this in mind, I sketched some rough concepts for characters which fit the aesthetic and narrative, as well as some ideas for shots. Once character designs were settled on, I went on to do some very rough storyboards, creating shot thumbnails that went along with the lyrics in order to guage the overall motion of the narrative. Many of these made it into the final film, albiet in a different order.</p>
-                <div class="flex_grid">
-                    <img src="../assets/NMBR1/initial_ideation.png" style="width:30%">
-                    <img src="../assets/NMBR1/Unfinished storyboards.png" style="width:55%">
+            <section id="section1" class="two_col_grid">
+                <div class="span">
+                    <h2>Concepts</h2>
+                    <p>After selecting a song, we decided we wanted to create a highly-stylized, neon street race. We wanted to make our characters very distinct in personality and design in order to make each character memorable and convey as much information since we couldn’t provide any additional context or dialogue. With this in mind, we each sketched out some characters aligned with our goal, as well as some potential shots that matched the lyrics of the song and built up the path for the narrative.</p>
                 </div>
+                <figure>
+                    <img src="../assets/NMBR1/initial_ideation.png">
+                    <figcaption>Fig. 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/NMBR1/Unfinished storyboards.png">
+                    <figcaption>Fig. 2</figcaption>
+                </figure>
             </section>
         </div>
         <div class="row content_bg">
-            <section id="section2">
-                <h2>Creating our Characters</h2>
-                <p>After character designs were finalized, I moved on to modelling the character I designed in Blender. To do this, I came up with animations testing the model, which had the added benefit of helping me get comfortable with animating in Blender.</p>
+            <section id="section2" class="two_col_grid">
+                <div>
+                    <h2>Modeling</h2>
+                    <p>After some team critique and revisions, character designs were finalized and we began modeling our characters in Blender. Because I had some prior experience modelling and rigging in Blender, I was able to make good progress on my character, Leon, while also occasionally helping my teammates with their models.</p>  
+                </div>
             </section>
         </div>
         <div class="row content_bg">
             <section id="section2">
                 <h2>Animating</h2>
-                <p>After character designs were finalized, I moved on to modelling the character I designed in Blender. To do this, I came up with animations testing the model, which had the added benefit of helping me get comfortable with animating in Blender.</p>
+                <p>Once Leon’s model was mostly complete, I made some short animations testing the model to get me comfortable with the process, as I had little experience actually animating in Blender. We planned out a shot list with their lengths, lyrics, and other information, and divided them amongst ourselves. A big focus for each of us was making our animation feel energetic and timing whatever we could to the beat of our selected song.</p>
             </section>
         </div>
         <div class="row content_bg">
             <section id="challenges">
                 <h2>Challenges</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
+                <p>There were few real challenges we encountered working on this project as my team and I worked very well together and we were able to help each other if we struggled. That being said, we did encounter some issues getting Blender’s physics engine to work the way we intended it to in the couple of shots where we were using it. In some cases we were just able to render the shot on a more powerful computer, but in others we had to rework the shot to work better.</p>
             </section>
             <section id="outcome">
                 <h2>Outcome</h2>
-                <p>NMBR1 was well received by our professor and our TA and was selected as the number one most liked animation after being included as an example of animations from prior semesters. </p>
+                <p>My team and I received a high grade for our project and was regarded with praise from our professor and TA. NMBR 1 was even included as an example of a good project in at least the two semesters following ours where it was voted most enjoyable by the students in these semesters. Overall, this project was a very positive team experience for me and I took away from it strategies to structure and distribute tasks for projects made in groups as well as animation skills that I have been applying to my personal game development projects.</p>
             </section>
         </div>
     </div>
@@ -83,5 +92,6 @@
         <a href="../pages/styleguide.html">Styleguide</a>
         <a href="../pages/references.html">References</a>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

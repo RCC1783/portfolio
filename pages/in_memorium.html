@@ -15,7 +15,8 @@
 <body>
     <header id="nav_header">
         <a class="logotype" href="../index.html">Roan Clifford</a>
-        <nav>
+        <button id="hamburger" class="nav-link">menu</button>
+        <nav id="link_container">
             <a class="nav-link" href="../pages/works.html">Works</a>
             <a class="nav-link" href="#">Character Art</a>
             <a class="nav-link" href="../pages/about.html">About</a>
@@ -26,37 +27,49 @@
             <div class="project_head">
                 <h1>In Memoriam</h1>
                 <hr>
-                <p class="tags_cont"><a href="../pages/works.html#games" class="content_tag game_dev">Games</a></p>
+                <div class="tags_cont"><a href="../pages/works.html#games" class="content_tag game_dev">Games</a></div>
             </div>
 
-            <section id="overview" class="flex_container">
+            <section id="overview" class="two_col_grid">
                 <!-- Placeholder Image. Should replace w gameplay video -->
-                <img src="../assets/in_memoriam/tower_modified.png" style="width: 60%; aspect-ratio: 16/9; align-self: center;">
-                <div class="col">
+                <figure>
+                    <img src="../assets/in_memoriam/tower_modified.png" alt="Illustration of a character wearing a wolf mask seen from behind looking up at a large tower piercing the clouds.">
+                    <figcaption><b>Fig. 0</b> - Cao, L. (2025) [Digital Illustration]</figcaption>
+                </figure>
+                <div>
                     <h2>Overview</h2>
-                    <p>In Memoriam is a story driven 3D action platformer built in Unity for Simon Fraser University’s Foundations of Game Design class. The aim of the project was to create a game with a branching narrative structure while applying concepts such as player types as well as core and satellite mechanics.</p>
+                    <p>In Memoriam is a story driven 3D action platformer built in a team of four for Unity for Simon Fraser University’s Foundations of Game Design class. The aim of the project was to create a game with a branching narrative structure while applying concepts such as player types as well as core and satellite mechanics.</p>
                     <div class="callout center_text">
                         <p><b>Roles:</b> Lead Programmer | Gameplay Designer </p>
-                        <p><b>Timeline:</b> Spring 2025</p>
+                        <p><b>Timeline:</b> Feb - Mar 2025</p>
                         <p><b>Tools:</b> Unity 3D & Version Control | Figma</p>
                     </div>
                 </div>
-                <div class="callout row center_text call_alt1">
+                <div class="callout center_text call_alt1 span">
                     <p><b>Goal:</b> <br> Apply learned knowledge of narrative structures, level design, core and satellite mechanics, and reward scheduling to create a game that integrates narrative and gameplay into a branching narrative.</p>
                 </div>
             </section>
         </div>
         <div class="row content_bg">
-            <section id="section1" class="flex_container">
-                <div class="col">
+            <section id="section1" class="two_col_grid">
+                <div>
                     <h2>Pre-production Art and Narrative Exploration</h2>
-                    <p>Prior to production, I contributed to the art of In Memoriam with a concept design for the player character (as shown in figure 5), and some rough storyboards for narrative beats (as shown in figures 6 and 7). Although my character design did not make it through to the end, elements of the design such as the wolf metaphor and clothing genre were kept.</p>
-                    <img src="../assets//in_memoriam/mc_concept_1.png">
+                    <p>Prior to production, I contributed to the art of In Memoriam with a concept design for the player character (as shown in figure 1), and some rough storyboards for narrative beats (as shown in figures 2 and 3). Although my character design did not make it through to the end, elements of the design such as the wolf metaphor and clothing genre were kept.</p>
                 </div>
-                <div class="col">
-                    <img src="../assets//in_memoriam/storyboard_1.png">
-                    <img src="../assets//in_memoriam/storyboard_2.png">
-                </div>
+                <figure>
+                    <img src="../assets//in_memoriam/mc_concept_1.png" alt="Two drawings of an anthropomorphic wolf and one sketch of an anthropomorphic faun in a cartoon style. The wolf is dressed in a vest and pointy shoes in one drawing and blue ghost mist instead of legs in the other. The deer is dressed like a prince.">
+                    <figcaption><b>Fig. 1</b> - Clifford, R. (2025) [Digital Illustration]</figcaption>
+                </figure>
+                <!-- <div class="col"> -->
+                    <figure>
+                        <img src="../assets//in_memoriam/storyboard_1.png" alt="a rough sketch of a storyboard where an anthropomorphic wolf is standing in a doorway to another world, holding out his hand to an anthropomorphic faun.">
+                        <figcaption><b>Fig. 2</b> - Clifford, R. (2025) [Digital Illustration]</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets//in_memoriam/storyboard_2.png" alt="a rough sketch of a storyboard showing the base of a tall tower with a staircase wrapping around its exterior. The entrance to the first floor of the tower looks like a tarot card with 1 in roman numerals at the top.">
+                        <figcaption><b>Fig. 3</b> - Clifford, R. (2025) [Digital Illustration]</figcaption>
+                    </figure>
+                <!-- </div> -->
             </section>
         </div>
         <!-- <div class="col_noBG min_50-perc">
@@ -66,47 +79,63 @@
             <img src="/assets/WebsiteBackground.png">
         </div> -->
         <div class="row content_bg">
-            <section id="section2" class="flex_container">
-                <div class="row">
+            <section id="section2" class="two_col_grid">
+                <div class="span">
                     <h2>Development Phase 1</h2>
-                    <p>My focus initially was to implement the foundational mechanics of our game as an action platformer: movement and camera controls. From here, I moved onto combat, health, and enemy behaviours (as shown in figure 8) that could be inherited from to create a variety of enemies.</p>
-                    <p>Although the game’s scope was relatively small, I wanted to create an easily expandable system to make every enemy different. Figure 9 shows the result, a completed enemy and its editable properties. Were I to work on this project further, I would easily be able to add more unique behaviours to each enemy such as more complicated or unique attacks.</p>
+                    <p>My focus initially was to implement the foundational mechanics of our game as an action platformer: movement and camera controls. From here, I moved onto combat, health, and enemy behaviours (as shown in figure 4) that could be inherited from to create a variety of enemies.</p>
+                    <p>Although the game’s scope was relatively small, I wanted to create an easily expandable system to make every enemy different. Figure 5 shows the result, a completed enemy and its editable properties. Were I to work on this project further, I would easily be able to add more unique behaviours to each enemy such as more complicated or unique attacks.</p>
                 </div>
-                <div class="row flex_grid">
-                    <img src="../assets//in_memoriam/code.png" style="max-width:45%;">
-                    <img src="../assets//in_memoriam/enemy_in_engine.png" style="max-width:45%;">
-                </div>
+                <!-- <div class="row flex_grid"> -->
+                    <figure>
+                        <img src="../assets//in_memoriam/code.png" alt="a screenshot of code for an enemy state machine.">
+                        <figcaption><b>Fig. 4</b> - Clifford, R. (2025) [Screenshot]</figcaption>
+                    </figure>
+                        
+                    <figure>
+                        <img src="../assets//in_memoriam/enemy_in_engine.png" alt="a screenshot of an enemy as seen in the game engine Unity">
+                        <figcaption><b>Fig. 5</b> - Clifford, R. (2025) [Screenshot]</figcaption>
+                    </figure>
+                    
+                <!-- </div> -->
             </section>
         </div>
         <div class="row content_bg">
-            <section id="section2" class="flex_container">
-                <div class="col">
+            <section id="section2" class="two_col_grid">
+                <div>
                     <h2>Development Phase 2</h2>
-                    <p>Outside of programming, I was also the most experienced in using Unity and did much of the work bringing over the art and animation created by our group's lead artist. Figure 8 shows some of this process as I use the sprites created by the team’s artist.</p>
+                    <p>Outside of programming, I was also the most experienced in using Unity and did much of the work bringing over the art and animation created by our group's lead artist. Figure 6 shows some of this process as I use the sprites created by the team’s artist.</p>
                 </div>
-                <div class="col">
-                    <img src="../assets//in_memoriam/animating_an_enemy.png">
-                </div>
+                <figure>
+                    <img src="../assets//in_memoriam/animating_an_enemy.png" alt="a screenshot of an enemy and the animation timeline in the game engine Unity">
+                    <figcaption><b>Fig. 6</b> - Clifford, R. (2025) [Screenshot]</figcaption>
+                </figure>
             </section>
         </div>
         <div class="row content_bg">
-            <section id="challenges">
-                <h2>Challenges</h2>
-                <p>Because the player is 2D in a 3D environment and we only had sprites from one camera perspective, playtesters struggled to gauge where the player was going to land after a jump. To fix this, I moved the player character’s light closer to their feet so players could use it as a shadow. This change can be seen when comparing Figures 11 and 12. This somewhat decreased the issue however, If I continued with the project, I would include sprites from different camera angles as well.</p>
-                <div class="flex_grid">
-                    <img src="../assets/in_memoriam/virtual_playtesting.png" style="flex:1; width: 45%;">
-                    <img src="../assets/in_memoriam/sand_level.png" style="flex:1; width: 45%;">
-                </div>
-            </section>
-            <section id="outcome">
-                <h2>Outcome</h2>
-                <p>Developing In Memoriam put my programming and Unity skills to the test. Designing and programming the game’s mechanics was a big undertaking and using playtesting to improve the project helped me take away a lot from this project.</p>
-            </section>
+            <div class="two_col_grid">
+                <section id="challenges" class="span">
+                    <h2>Challenges</h2>
+                    <p>Because the player is 2D in a 3D environment and we only had sprites from one camera perspective, playtesters struggled to gauge where the player was going to land after a jump. To fix this, I moved the player character’s light closer to their feet so players could use it as a shadow. This change can be seen when comparing Figures 7 and 8. This somewhat decreased the issue however, If I continued with the project, I would include sprites from different camera angles as well.</p>
+                </section>
+                <figure>
+                    <img src="../assets/in_memoriam/virtual_playtesting.png" alt="a screenshot of a Discord call where a playtester is playing In Memoriam">
+                    <figcaption><b>Fig. 7</b> - Clifford, R. (2025) [Screenshot]</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/in_memoriam/sand_level.png" alt="a screenshot of In Memoriam. A character with a wolf mask stands on a floating platform in a desert landscape. There are some skeleton enemies nearby guarding a floating card and a tower in the distance.">
+                    <figcaption><b>Fig. 8</b> - Clifford, R. (2025) [Screenshot]</figcaption>
+                </figure>
+                <section id="outcome" class="span">
+                    <h2>Outcome</h2>
+                    <p>Developing In Memoriam put my programming and Unity skills to the test. Designing and programming the game’s mechanics was a big undertaking and using playtesting to improve the project helped me take away a lot from this project.</p>
+                </section>  
+            </div>
         </div>
     </div>
     <footer>
         <a href="../pages/styleguide.html">Styleguide</a>
         <a href="../pages/references.html">References</a>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>
