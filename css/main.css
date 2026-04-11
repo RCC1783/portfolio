@@ -400,8 +400,9 @@ footer p{
 }
 
 footer ul{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style-type: none;
     gap: 20px;
     padding: 0;
@@ -679,10 +680,6 @@ blockquote p{
 
     footer{
         padding: 25px 50px;
-    }
-
-    footer ul{
-        grid-template-columns: auto auto;
     }
 }
 
