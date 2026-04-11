@@ -23,13 +23,13 @@
         </nav>
     </header>
     <div class="page_content">
-        <section id="textElements" class="col content_bg">
+        <section id="textElements" class="content_bg row">
             <h2>Text Elements</h2>
             <h3>Default text</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <h3>Quotes</h3>
-            <p><q>skjffhsekjfhskjfhskjfhkjsdh</q></p>
+            <p><q>Lorem ipsum dolor sit amet consectetur adipiscing elit.</q></p>
 
             <h3>Block-quotes</h3>
             <blockquote>
@@ -76,7 +76,7 @@
             </code></p>
         </section>
 
-        <section id="interactives" class="col content_bg">
+        <section id="interactives" class="content_bg row">
             <h2>Interactives</h2>
             <h3>Links</h3>
             <a href="#">In text link</a>
@@ -100,8 +100,8 @@
                 <li><a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a> <br> <code>&lt;a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design&lt;/a></code></li>
             </ul>
 
-            <!-- <h3>Buttons</h3> -->
-            <!-- <button>Button 1</button> -->
+            <h3>Buttons</h3>
+            <button class="nav-link">Button 1</button>
 
             <h3>Project Cards</h3>
             <a href="#" class="project_card">
@@ -122,10 +122,11 @@
             <p><code>
                 &lt;header id="nav_header"> <br>
                     &lt;a class="logotype" href="#">Styleguide&lt;/a> <br>
-                    &lt;nav class="mainLinks"> <br>
-                        &lt;a class="nav-link" href="/index.html">Homepage&lt;/a> <br>
-                        &lt;a class="nav-link" href="#textElements">Text Elements&lt;/a> <br>
-                        &lt;a class="nav-link" href="#interactives">Interactives&lt;/a> <br>
+                    &lt;button id="hamburger" class="nav-link">menu&lt;/button> <br>
+                    &lt;nav id="link_container"> <br>
+                        &lt;a class="nav-link" href="./...">Link 1&lt;/a> <br>
+                        &lt;a class="nav-link" href="./...">Link 2&lt;/a> <br>
+                        &lt;a class="nav-link" href="./...">Link 3&lt;/a> <br>
                     &lt;/nav> <br>
                 &lt;/header>
             </code></p>
@@ -134,13 +135,13 @@
             <div class="project_head">
                 <h1>Project Title</h1>
                 <hr>
-                <p class="tags_cont"><a href="../pages/works.html#games" class="content_tag game_dev">Games</a> | <a href="../pages/works.html#animation" class="content_tag animation">Animation</a> | <a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></p>
+                <div class="tags_cont"><a href="../pages/works.html#animation" class="content_tag animation">Animation</a> <a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design</a></div>
             </div>
             <p><code>
                 &lt;div class="project_head"> <br>
                     &lt;h1>Project Title&lt;/h1> <br>
                     &lt;hr> <br>
-                    &lt;p class="tags_cont">&lt;a href="/pages/works.html#games" class="content_tag game_dev">Games&lt;/a> | &lt;a href="/pages/works.html#animation" class="content_tag animation">Animation&lt;/a> | &lt;a href="/pages/works.html#character_design" class="content_tag char_design">Chararacter Design&lt;/a>&lt;/p> <br>
+                    &lt;div class="tags_cont">&lt;a href="../pages/works.html#animation" class="content_tag animation">Animation&lt;/a> &lt;a href="../pages/works.html#character_design" class="content_tag char_design">Chararacter Design&lt;/a>&lt;/div><br>
                 &lt;/div>
             </code></p>
 
@@ -149,6 +150,12 @@
                 <img src="../assets/star_icon.png" alt="" loading="lazy">
                 <figcaption><b>Fig. #</b> - Figure caption</figcaption>
             </figure>
+            <p><code>
+                &lt;figure> <br>
+                    &lt;img src="../assets/star_icon.png" alt="" loading="lazy"> <br>
+                    &lt;figcaption>&lt;b>Fig. #&lt;/b> - Figure caption&lt;/figcaption> <br>
+                &lt;/figure>
+            </code></p>
         </section>
     </div>
     <footer>

@@ -12,7 +12,7 @@
 
     --cursor_point: url(/assets/pointer_b.png);
     --cursor_hand: url(/assets/hand_small_point.png);
-    cursor: var(--cursor_point), auto;
+    cursor: var(--cursor_point) 8 8, auto;
     font-family: "Nunito", sans-serif;
 
     --primary_grad: radial-gradient(circle, rgba(251, 163, 63, 0.9) 26%, rgb(255, 115, 143) 90%);
@@ -77,6 +77,14 @@ body{
 
     color: white;
     transition: transform 0.3s, top 0.3s, left 0.3s;
+}
+.landing_content nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.landing_content nav a{
+    color: orange;
 }
 .landing_head{
     font-size: 6rem;
@@ -156,7 +164,7 @@ p{
 a{
     text-decoration: underline 0.09rem dotted;
     color: #ac3e13;
-    cursor: url(/assets/hand_small_point.png), auto;
+    cursor: url(/assets/hand_small_point.png) 8 8, auto;
 }
 
 h1{
@@ -338,6 +346,7 @@ img{
 } */
 
 figure{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-width: 200px;
@@ -346,6 +355,7 @@ figure{
     align-items: center;
     background: #ffffff;
     padding: 20px;
+    margin: 1rem;
     border-radius: 20px;
 }
 figure img{
@@ -669,6 +679,10 @@ blockquote p{
 
     footer{
         padding: 25px 50px;
+    }
+
+    footer ul{
+        grid-template-columns: auto auto;
     }
 }
 
