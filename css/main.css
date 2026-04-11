@@ -10,8 +10,8 @@
 
     margin: 0;
 
-    --cursor_point: url(/assets/pointer_b.png);
-    --cursor_hand: url(/assets/hand_small_point.png);
+    --cursor_point: url(../assets/pointer_b.png);
+    --cursor_hand: url(../assets/hand_small_point.png);
     cursor: var(--cursor_point) 8 8, auto;
     font-family: "Nunito", sans-serif;
 
@@ -164,7 +164,7 @@ p{
 a{
     text-decoration: underline 0.09rem dotted;
     color: #ac3e13;
-    cursor: url(/assets/hand_small_point.png) 8 8, auto;
+    cursor: var(--cursor_hand) 8 8, auto;
 }
 
 h1{
@@ -281,9 +281,9 @@ img{
     backdrop-filter: blur(10px);
 }
 
-/* #hamburger{
-    cursor: var(--cursor_hand), auto;
-} */
+#hamburger{
+    cursor: var(--cursor_hand) 8 8, auto;
+}
 
 .nav-link:hover, .nav-link:focus{
     box-shadow: 0 0 10px rgba(73, 0, 110, 0.3);
