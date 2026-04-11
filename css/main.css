@@ -245,7 +245,7 @@ img{
 }
 
 .spacer{
-    flex-basis: 1;
+    flex: 1;
 }
 
 /* https://css-irl.info/animating-underlines/ */
@@ -445,7 +445,6 @@ blockquote p{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    text-justify: center;
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -516,7 +515,7 @@ blockquote p{
 
     margin: 0;
 
-    transition: color 0.2s font-size 0.2s;
+    transition: color 0.2s, font-size 0.2s;
 }
 .project_card:hover p{
     color: white;
